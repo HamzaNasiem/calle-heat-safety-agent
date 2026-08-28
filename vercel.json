@@ -1,10 +1,11 @@
 {
+  "framework": "vite",
   "buildCommand": "cd frontend && npm install && npm run build",
   "outputDirectory": "frontend/dist",
   "rewrites": [
     {
       "source": "/api/:path*",
-      "destination": "https://calle-heat-guardian.onrender.com/:path*"
+      "destination": "https://calle-heat-safety.onrender.com/:path*"
     },
     {
       "source": "/(.*)",
