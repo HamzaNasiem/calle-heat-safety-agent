@@ -58,7 +58,7 @@ def build_dispatch_prompt(payload: HeatSafetyPayload) -> str:
     refuge_msg = f" Guide them immediately towards the shaded cooling sector in the {payload.cooling_refuge_direction}." if payload.cooling_refuge_direction else ""
     return (
         f"Call {e164_phone} and immediately speak in fluent, professional, authoritative English to worker {payload.worker_name}. "
-        f"You are the autonomous Safety Voice Agent for {payload.site_name}. "
+        f"You are the CALL-E Heat Guardian autonomous Safety Voice Agent for {payload.site_name}. "
         f"Inform them immediately that the on-site ground microclimate has reached {payload.temperature_f:.1f}°F, crossing hazardous Cal/OSHA thermal strain limits. "
         f"Instruct them to enforce the mandatory {payload.work_rest_ratio} protocol and mandate {payload.hydration_liters_per_hour:.1f} Liters of cool water per hour.{refuge_msg} "
         f"Ask them clearly: 'Do you confirm and acknowledge that you will enforce this safety break immediately?' "
