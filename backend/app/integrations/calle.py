@@ -53,7 +53,7 @@ def build_task_prompt(to_number: str, worker_name: str, site_name: str, temp_f_s
     return (
         f"Call {to_number} and immediately speak in fluent, professional, authoritative English to worker {worker_name}. "
         f"Deliver this urgent OSHA heat safety broadcast: "
-        f"'Attention {worker_name}! This is the ThermaShift AI autonomous heat safety dispatcher. "
+        f"'Attention {worker_name}! This is the CALL-E Heat Guardian autonomous heat safety dispatcher. "
         f"A critical thermal hazard of {temp_f_str} degrees Fahrenheit has been recorded at your work site, {site_name}. "
         f"Under OSHA safety protocol, you are required to immediately halt heavy outdoor tasks, move to the shaded cooling canopy, and hydrate with cool water.' "
         f"Ask {worker_name} if they understand and confirm they are moving to shade."
@@ -97,7 +97,7 @@ async def trigger_outbound_call(worker, site, snapshot) -> str:
             "temperature_f": float(snapshot.temperature_f),
             "risk_level": str(snapshot.risk_level),
             "language": language,
-            "system": "ThermaShift AI",
+            "system": "CALL-E Heat Guardian",
         }
     }
 
@@ -183,7 +183,7 @@ async def trigger_direct_call(phone_number: str, worker_name: str) -> str:
 
     task_instruction = (
         f"Call {to_number} and immediately speak in fluent, professional, authoritative English. "
-        f"Say: 'Hello {worker_name}, this is a live test of the ThermaShift AI autonomous heat safety system. "
+        f"Say: 'Hello {worker_name}, this is a live test of the CALL-E Heat Guardian autonomous voice safety system. "
         f"If this were a real emergency, your work site would be reporting a critical thermal hazard and you would "
         f"be instructed to stop work and move to a shaded cooling area immediately. "
         f"This call confirms your emergency voice alert is working correctly.' "
@@ -207,7 +207,7 @@ async def trigger_direct_call(phone_number: str, worker_name: str) -> str:
             "worker_name": worker_name,
             "phone_number": to_number,
             "call_type": "direct_test",
-            "system": "ThermaShift AI",
+            "system": "CALL-E Heat Guardian",
         },
     }
 

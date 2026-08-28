@@ -28,7 +28,7 @@ const STORY_STEPS = [
     tagline: 'Computing true surface hazard vs shaded canopy relief.',
     accent: '#D97706',
     description:
-      'While ambient air might read 104°F, black asphalt ground under direct solar radiation surges to 129°F. ThermaShift AI calculates the exact thermodynamic gradient and computes an immediate escape vector to the nearest shaded canopy.',
+      'While ambient air might read 104°F, black asphalt ground under direct solar radiation surges to 129°F. CALL-E Heat Guardian calculates the exact thermodynamic gradient and computes an immediate escape vector to the nearest shaded canopy.',
     metrics: [
       { label: 'Asphalt Surface', value: '129.1°F (Extreme)' },
       { label: 'Canopy Refuge', value: '85.0°F (Safe)' },
@@ -43,7 +43,7 @@ const STORY_STEPS = [
     tagline: 'Instant bilingual phone calls to workers in danger.',
     accent: '#059669',
     description:
-      'When thermal thresholds are breached, ThermaShift AI does not wait for human intervention. It connects to the CALL-E telephony network and places direct voice calls to site foremen and crews in Urdu and English.',
+      'When thermal thresholds are breached, CALL-E Heat Guardian does not wait for human intervention. It connects to the CALL-E telephony network and places direct voice calls to site foremen and crews in Urdu and English.',
     metrics: [
       { label: 'Voice Network', value: 'CALL-E Real Telephony' },
       { label: 'Supported Languages', value: 'Urdu + English' },
@@ -85,7 +85,7 @@ export default function ProductStoryModal({ onClose, onTriggerTest }: ProductSto
             </div>
             <div>
               <h2 className="text-sm font-bold text-[#141414]">
-                How ThermaShift AI Works
+                How CALL-E Heat Guardian Works
               </h2>
               <p className="text-[11px] text-slate-500 font-medium">
                 Autonomous Heat Safety Architecture & Pipeline

@@ -100,7 +100,7 @@ export default function DirectCallModal({
                 <span>Call Initiated! Ringing your phone now...</span>
               </div>
               <div className="font-mono text-[11px] text-emerald-900/80">Call ID: {result.call_id}</div>
-              <p className="text-[11px] text-emerald-900/70 font-medium">Answer the call to hear ThermaShift AI's bilingual voice dispatch.</p>
+              <p className="text-[11px] text-emerald-900/70 font-medium">Answer the call to hear CALL-E Heat Guardian's bilingual voice dispatch.</p>
               
               {onTrackCall && result.call_id && (
                 <button

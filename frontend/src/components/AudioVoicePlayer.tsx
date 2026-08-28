@@ -27,7 +27,7 @@ export default function AudioVoicePlayer({
     }
   }, [])
 
-  const englishScript = `Attention ${workerName || 'Site Supervisor'}! This is the ThermaShift AI autonomous heat-safety dispatch. A hazardous surface asphalt temperature of ${Math.round(surfaceTempF)} degrees Fahrenheit has been detected at ${siteName || 'your industrial worksite'}. In accordance with OSHA emergency heat protocols, halt heavy outdoor operations immediately and relocate all personnel to ${refugeName || 'Zone D Cooling Canopy'} for ${Math.round(reliefDeltaF)} degrees of cooling relief.`
+  const englishScript = `Attention ${workerName || 'Site Supervisor'}! This is the CALL-E Heat Guardian autonomous heat safety dispatch. A hazardous surface asphalt temperature of ${Math.round(surfaceTempF)} degrees Fahrenheit has been detected at ${siteName || 'your industrial worksite'}. In accordance with OSHA emergency heat protocols, halt heavy outdoor operations immediately and relocate all personnel to ${refugeName || 'Zone D Cooling Canopy'} for ${Math.round(reliefDeltaF)} degrees of cooling relief.`
 
   // Play modern alert chime via Web Audio API before voice
   function playAlertChime() {
