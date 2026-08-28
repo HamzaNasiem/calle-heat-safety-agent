@@ -44,7 +44,7 @@ async def test_health_endpoint():
         assert response.status_code == 200
         data = response.json()
         assert data["status"] == "ok"
-        assert data["service"] == "ThermaShift AI"
+        assert "CALL-E" in data["service"]
 
 
 async def test_list_sites_endpoint():

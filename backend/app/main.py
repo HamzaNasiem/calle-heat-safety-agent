@@ -93,8 +93,8 @@ async def lifespan(app: FastAPI):
 
 
 app = FastAPI(
-    title="ThermaShift AI",
-    description="Autonomous heat-safety alert system for outdoor workers.",
+    title="CALL-E Heat Guardian",
+    description="Autonomous phone call safety agent for outdoor workers powered by CALL-E Voice AI.",
     version="1.0.0",
     lifespan=lifespan,
 )
@@ -103,9 +103,10 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         settings.frontend_url,
+        "https://calle-heat-safety.vercel.app",
+        "http://localhost:3005",
         "http://localhost:5173",
         "http://localhost:3000",
-        "https://thermashift-ai.vercel.app",
         "*",
     ],
     allow_credentials=True,
@@ -128,8 +129,21 @@ app.include_router(alerts.router, prefix="/api/alerts", tags=["Alerts API"])
 app.include_router(internal.router, prefix="/api/internal", tags=["Internal API"])
 
 
+@app.get("/", tags=["Root"])
+@app.get("/api", tags=["Root"])
+async def root_index():
+    """Service landing endpoint."""
+    return {
+        "service": "CALL-E Heat Guardian API",
+        "status": "online",
+        "version": "1.0.0",
+        "docs": "/docs",
+        "voice_agent": "CALL-E (HeyCall-E) Real Telephony Engine"
+    }
+
+
 @app.get("/health", tags=["Health"])
 @app.get("/api/health", tags=["Health"])
 async def health_check():
     """Simple liveness check endpoint."""
-    return {"status": "ok", "service": "ThermaShift AI"}
+    return {"status": "ok", "service": "CALL-E Heat Guardian"}
