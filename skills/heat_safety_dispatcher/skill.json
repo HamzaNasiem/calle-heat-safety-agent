@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "name": "heat-safety-dispatcher",
+  "version": "1.0.0",
+  "description": "Dispatches autonomous outbound conversational phone calls to outdoor workers when extreme heat or thermal strain thresholds are breached.",
+  "parameters": {
+    "type": "object",
+    "properties": {
+      "phone_number": {
+        "type": "string",
+        "description": "E.164 formatted recipient phone number (e.g. +12135550192 or +923172532350)"
+      },
+      "worker_name": {
+        "type": "string",
+        "description": "Name of the worker, site foreman, or safety officer"
+      },
+      "site_name": {
+        "type": "string",
+        "description": "Job site location or facility name"
+      },
+      "temperature_f": {
+        "type": "number",
+        "description": "Measured ground-level or ambient temperature in Fahrenheit"
+      },
+      "work_rest_ratio": {
+        "type": "string",
+        "description": "OSHA-mandated work/rest ratio (e.g. '15 min work / 45 min rest')"
+      },
+      "hydration_liters_per_hour": {
+        "type": "number",
+        "description": "Mandatory hydration quota in liters per hour (e.g. 1.5)"
+      },
+      "cooling_refuge_direction": {
+        "type": "string",
+        "description": "Direction to the coolest measured shade zone (e.g. 'North-East canopy')"
+      }
+    },
+    "required": ["phone_number", "worker_name", "site_name", "temperature_f"]
+  },
+  "return_schema": {
+    "type": "object",
+    "properties": {
+      "call_id": { "type": "string" },
+      "status": { "type": "string" },
+      "worker_acknowledged": { "type": "boolean" },
+      "summary": { "type": "string" },
+      "duration_seconds": { "type": "integer" }
+    }
+  }
+}
