@@ -44,15 +44,28 @@ def test_build_dispatch_prompt_content():
 
 @pytest.mark.asyncio
 async def test_trigger_heat_call_live_or_mock():
-    """Test actual dispatch call creation against CALL-E API."""
+    """Test actual dispatch call creation payload and response parsing with safe mock."""
+    from unittest.mock import patch, MagicMock
+    import httpx
+
+    mock_resp = MagicMock(spec=httpx.Response)
+    mock_resp.status_code = 200
+    mock_resp.json.return_value = {
+        "call_id": "call_test_mock_123456",
+        "status": "queued",
+        "data": {"call_id": "call_test_mock_123456", "status": "queued"}
+    }
+    mock_resp.raise_for_status.return_value = None
+
     payload = HeatSafetyPayload(
         phone_number="+923172532350",
         worker_name="Hamza (Safety Lead)",
         site_name="Test Validation Facility",
         temperature_f=107.0,
     )
-    result = await trigger_heat_call(payload=payload)
-    assert result.call_id is not None
-    assert len(result.call_id) > 0
-    assert result.phone_number == "+923172532350"
-    assert result.status in ("queued", "in-progress", "completed", "created")
+
+    with patch("httpx.AsyncClient.post", return_value=mock_resp):
+        result = await trigger_heat_call(payload=payload)
+        assert result.call_id == "call_test_mock_123456"
+        assert result.phone_number == "+923172532350"
+        assert result.status in ("queued", "in-progress", "completed", "created")
