@@ -21,7 +21,7 @@ GLOBAL_SITES = [
         "extreme_f": 105.0,
         "elevated_f": 96.0,
         "workers": [
-            {"id": uuid.UUID("33333333-3333-3333-3333-333333333333"), "name": "Hamza (Safety Director)", "phone": "+923172532350", "lang": "en"},
+            {"id": uuid.UUID("33333333-3333-3333-3333-333333333333"), "name": "Hamza (Safety Director)", "phone": "+12135550100", "lang": "en"},
             {"id": uuid.UUID("33333333-3333-3333-3333-333333333334"), "name": "Carlos Rodriguez (Civil Supervisor)", "phone": "+12135550192", "lang": "en"},
             {"id": uuid.UUID("33333333-3333-3333-3333-333333333335"), "name": "Miguel Santos (Paving Tech)", "phone": "+12135550148", "lang": "en"},
         ]
@@ -35,7 +35,7 @@ GLOBAL_SITES = [
         "extreme_f": 102.0,
         "elevated_f": 94.0,
         "workers": [
-            {"id": uuid.UUID("11111111-1111-1111-1111-111111111111"), "name": "Hamza (Field Operations Lead)", "phone": "+923172532350", "lang": "en"},
+            {"id": uuid.UUID("11111111-1111-1111-1111-111111111111"), "name": "Hamza (Field Operations Lead)", "phone": "+13105550100", "lang": "en"},
             {"id": uuid.UUID("11111111-1111-1111-1111-111111111112"), "name": "James Thornton (Crane Lead)", "phone": "+13105550172", "lang": "en"},
             {"id": uuid.UUID("11111111-1111-1111-1111-111111111113"), "name": "Robert Chen (Container Tech)", "phone": "+13105550194", "lang": "en"},
         ]
@@ -49,7 +49,7 @@ GLOBAL_SITES = [
         "extreme_f": 108.0,
         "elevated_f": 100.0,
         "workers": [
-            {"id": uuid.UUID("55555555-5555-5555-5555-555555555555"), "name": "Hamza (Solar Site Lead)", "phone": "+923172532350", "lang": "en"},
+            {"id": uuid.UUID("55555555-5555-5555-5555-555555555555"), "name": "Hamza (Solar Site Lead)", "phone": "+15595550100", "lang": "en"},
             {"id": uuid.UUID("55555555-5555-5555-5555-555555555556"), "name": "Elena Morales (Harvest Lead)", "phone": "+15595550199", "lang": "en"},
             {"id": uuid.UUID("55555555-5555-5555-5555-555555555557"), "name": "David Flores (Irrigation Tech)", "phone": "+15595550183", "lang": "en"},
         ]
@@ -63,7 +63,7 @@ GLOBAL_SITES = [
         "extreme_f": 106.0,
         "elevated_f": 98.0,
         "workers": [
-            {"id": uuid.UUID("22222222-2222-2222-2222-222222222222"), "name": "Hamza (Logistics Safety Lead)", "phone": "+923172532350", "lang": "en"},
+            {"id": uuid.UUID("22222222-2222-2222-2222-222222222222"), "name": "Hamza (Logistics Safety Lead)", "phone": "+19095550100", "lang": "en"},
             {"id": uuid.UUID("22222222-2222-2222-2222-222222222223"), "name": "Marcus Vance (Forklift Lead)", "phone": "+19095550141", "lang": "en"},
         ]
     },
@@ -76,7 +76,7 @@ GLOBAL_SITES = [
         "extreme_f": 104.0,
         "elevated_f": 95.0,
         "workers": [
-            {"id": uuid.UUID("44444444-4444-4444-4444-444444444444"), "name": "Hamza (Project Supervisor)", "phone": "+923172532350", "lang": "en"},
+            {"id": uuid.UUID("44444444-4444-4444-4444-444444444444"), "name": "Hamza (Project Supervisor)", "phone": "+14085550100", "lang": "en"},
             {"id": uuid.UUID("44444444-4444-4444-4444-444444444445"), "name": "Brian Kelly (Structural Tech)", "phone": "+14085550198", "lang": "en"},
         ]
     }
