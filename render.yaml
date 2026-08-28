@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: calle-heat-guardian
+    runtime: python
+    plan: free
+    buildCommand: "pip install -r backend/requirements.txt"
+    startCommand: "cd backend && uvicorn app.main:app --host 0.0.0.0 --port $PORT"
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      - key: ENVIRONMENT
+        value: production
+      - key: CALLE_API_KEY
+        value: iams_live_0UvYeesXBhr5GamQNqqc_b8da836ba3458377b7e17ca3dff69d76527d686f5c889839ea65c6096a0c90ec
+      - key: CALLE_BASE_URL
+        value: https://api.heycall-e.com/v1

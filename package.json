@@ -1,5 +1,5 @@
 {
-  "name": "thermashift-ai",
+  "name": "calle-heat-guardian",
   "private": true,
   "scripts": {
     "dev": "npm --prefix frontend run dev",
