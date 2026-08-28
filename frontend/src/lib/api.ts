@@ -15,7 +15,7 @@ import type {
   HealthCheckResponse,
 } from '../types'
 
-export const API_BASE = String((import.meta as any).env?.VITE_API_BASE || 'https://thermashift-ai.onrender.com').replace(/\/$/, '')
+export const API_BASE = String((import.meta as any).env?.VITE_API_BASE || 'https://calle-heat-safety.onrender.com').replace(/\/$/, '')
 
 /**
  * Universal JSON response handler that extracts FastAPI error detail messages
