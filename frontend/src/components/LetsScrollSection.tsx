@@ -17,8 +17,8 @@ export default function LetsScrollSection() {
         atmosphere: true,
         sections: [
           {
-            id: 'fortyguard-satellite',
-            label: 'FortyGuard Satellite Feed',
+            id: 'thermal-radar-feed',
+            label: 'Thermal Radar Feed',
             eyebrow: 'Real-Time Thermal Telemetry',
             title: 'Continuous Heat Monitoring',
             body: 'Ingesting micro-climate temperature data across outdoor construction zones every 10 minutes.',

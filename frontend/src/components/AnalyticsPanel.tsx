@@ -43,7 +43,7 @@ export default function AnalyticsPanel({ snapshot }: AnalyticsPanelProps) {
     <div className="space-y-3.5 font-sans">
       <div className="flex items-center justify-between">
         <span className="text-[11px] font-bold uppercase tracking-wider text-[#141414]">
-          FortyGuard Thermal Distribution
+          Spatial Thermal Distribution
         </span>
         <span className="badge-slate text-[10px] font-bold">
           70 Cells (100m)

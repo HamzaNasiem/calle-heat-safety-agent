@@ -41,7 +41,7 @@ export default function AutonomousGuardianFeed({
             </div>
             <p className="font-bold text-[#141414]">No Emergency Calls Dispatched</p>
             <p className="text-[11px] text-slate-500 leading-relaxed font-medium">
-              FortyGuard is actively polling {siteName}. When heat crosses threshold ({isExtreme ? 'Extreme Heat Active' : 'Safe Baseline'}), automated voice calls and SMS are logged here.
+              CALL-E Heat Guardian is actively monitoring {siteName}. When heat crosses threshold ({isExtreme ? 'Extreme Heat Active' : 'Safe Baseline'}), automated voice calls and SMS are logged here.
             </p>
           </div>
         ) : (

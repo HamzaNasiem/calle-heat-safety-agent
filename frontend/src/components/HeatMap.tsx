@@ -412,7 +412,7 @@ export default function HeatMap({ site, riskLevel, snapshot, microclimate }: Hea
               <div className="flex items-center gap-2">
                 <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
                 <h4 className="font-bold text-[#141414] text-xs">
-                  FortyGuard Tile Telemetry
+                  Thermal Grid Telemetry
                 </h4>
               </div>
               <button
@@ -455,8 +455,8 @@ export default function HeatMap({ site, riskLevel, snapshot, microclimate }: Hea
         <div className="absolute bottom-2 sm:bottom-4 left-2 sm:left-4 z-[999] bg-[#ffffff]/95 backdrop-blur-md p-2.5 sm:p-3 rounded-2xl border border-slate-200 shadow-xl text-xs space-y-1.5 sm:space-y-2 max-w-[calc(100%-1rem)] sm:max-w-xs">
           <div className="flex items-center justify-between text-[#141414] font-bold">
             <span className="flex items-center gap-1.5 text-[11px] sm:text-xs">
-              <span className="w-2 h-2 rounded-full bg-emerald-600"></span>
-              FortyGuard Heat Gradient
+              <span className="w-2 h-2 rounded-full bg-rose-600"></span>
+              Microclimate Heat Gradient
             </span>
             <span className="text-slate-500 text-[10px] font-bold">°F</span>
           </div>

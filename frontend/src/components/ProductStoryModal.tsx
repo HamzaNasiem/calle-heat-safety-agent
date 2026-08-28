@@ -8,18 +8,18 @@ interface ProductStoryModalProps {
 const STORY_STEPS = [
   {
     step: '01',
-    category: 'SATELLITE & AI INGESTION',
-    title: 'FortyGuard Geospatial Thermal Radar',
+    category: 'MICROCLIMATE TELEMETRY',
+    title: 'High-Resolution Thermal Radar Ingestion',
     tagline: 'Hyperlocal 100m heat variance across critical outdoor worksites.',
     accent: '#0284C7',
     description:
-      'ThermaShift AI autonomously queries FortyGuard’s Temperature API for registered infrastructure polygons. Instead of generic city weather, it measures the exact ground thermal footprint and urban heat island penalty.',
+      'CALL-E Heat Guardian autonomously monitors microclimate heat levels for registered industrial and construction sites. When ground temperatures cross hazardous limits, it triggers immediate autonomous voice dispatch.',
     metrics: [
       { label: 'Spatial Resolution', value: '100 × 100 m' },
-      { label: 'Live Data Source', value: 'FortyGuard API' },
-      { label: 'Credit Safeguard', value: '4-Hr DB Cache' },
+      { label: 'Monitoring Engine', value: 'Live Thermal Radar' },
+      { label: 'Evaluation Cycle', value: 'Autonomous 24/7' },
     ],
-    highlight: 'Transforms passive satellite heat maps into real-time operational safety parameters.',
+    highlight: 'Converts environmental sensor data into actionable emergency voice call triggers.',
   },
   {
     step: '02',

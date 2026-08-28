@@ -89,7 +89,7 @@ export default function RegisterSiteModal({ onSiteCreated, onClose }: RegisterSi
                 Register Work Site AOI
               </h2>
               <p className="text-[11px] text-slate-500 font-medium">
-                FortyGuard Satellite Microclimate Polling Area
+                Autonomous Voice Safety & Heat Polling Area
               </p>
             </div>
           </div>

@@ -12,10 +12,10 @@ export default function MissionScrubber({ onReturnToDashboard }: MissionScrubber
     if (!containerRef.current) return
 
     mountLetsScroll(containerRef.current, {
-      brand: { name: 'ThermaShift AI', href: '#top' },
+      brand: { name: 'CALL-E Heat Guardian', href: '#top' },
       diveScroll: 1.2,
       connScroll: 0.8,
-      hint: 'Scroll to fly through the FortyGuard Heat Safety Chain',
+      hint: 'Scroll to fly through the CALL-E Autonomous Voice Safety Chain',
       nav: true,
       atmosphere: true,
       sections: [
@@ -24,10 +24,10 @@ export default function MissionScrubber({ onReturnToDashboard }: MissionScrubber
           label: '1. Hyperlocal Heat',
           still: 'https://images.unsplash.com/photo-1509114397022-ed747cca3f65?auto=format&fit=crop&w=1200&q=80',
           accent: '#A27B5C',
-          eyebrow: 'FortyGuard Spatial Intelligence',
+          eyebrow: 'Autonomous Thermal Ingestion',
           title: '100m Microclimate Street Grid',
           body: 'Capturing urban heat island variations 2m above ground level over registered work site boundaries.',
-          tags: ['100m Resolution', '70 Microcells', 'FortyGuard API']
+          tags: ['100m Resolution', '70 Microcells', 'Live Radar']
         },
         {
           id: 'safety',

@@ -56,7 +56,7 @@ export default function Sites() {
             Registered Geo-Fenced Work Sites
           </h1>
           <p className="text-[11px] sm:text-xs text-slate-500 font-medium mt-0.5">
-            Hyperlocal Industrial & Construction Polygons Monitored 24/7 by FortyGuard AI
+            Hyperlocal Industrial & Construction Polygons Monitored 24/7 by CALL-E Heat Guardian
           </p>
         </div>
 

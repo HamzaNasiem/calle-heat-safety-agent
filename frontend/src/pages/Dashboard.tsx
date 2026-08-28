@@ -144,7 +144,7 @@ export default function Dashboard() {
             ) : (
               <div className="flex items-center gap-1.5 text-xs text-slate-400 font-medium">
                 <span className="w-1.5 h-1.5 rounded-full bg-slate-400 animate-pulse" />
-                Polling FortyGuard...
+                Polling Sensors & CALL-E...
               </div>
             )}
           </div>
@@ -165,12 +165,12 @@ export default function Dashboard() {
             <button
               onClick={() => setShowTelemetryModal(true)}
               className="btn-ghost"
-              title="Inspect FortyGuard API Usage"
+              title="Inspect CALL-E Voice AI Usage & Telemetry"
             >
-              <svg className="w-3.5 h-3.5 text-slate-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-3.5 h-3.5 text-rose-600 shrink-0" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
               </svg>
-              <span className="font-semibold text-slate-800 text-xs">Telemetry</span>
+              <span className="font-semibold text-slate-800 text-xs">CALL-E Telemetry</span>
             </button>
 
             <button

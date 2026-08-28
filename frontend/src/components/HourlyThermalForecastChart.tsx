@@ -48,7 +48,7 @@ export function HourlyThermalForecastChart({ data }: HourlyThermalForecastChartP
       <div className="flex flex-wrap items-center justify-between border-b border-[#e5e5e5] pb-3 gap-2">
         <div>
           <h3 className="text-xs font-bold text-[#141414] tracking-tight">
-            FortyGuard Diurnal Heat Curve & OSHA Shift Trajectory (09:00 - 18:00)
+            Diurnal Heat Curve & OSHA Shift Trajectory (09:00 - 18:00)
           </h3>
           <span className="text-[11px] text-slate-500 font-medium">
             Hourly Surface Asphalt Absorption vs Shaded Canopy Microclimate

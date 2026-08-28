@@ -59,7 +59,7 @@ export default function MicroclimateTelemetryCard({ data, loading, onBroadcastCl
             Spatial Thermal Telemetry
           </h3>
           <p className="text-[11px] text-slate-500 font-medium">
-            FortyGuard Satellite Peak vs Coolest AOI Sector
+            Thermal Radar Peak vs Coolest AOI Sector
           </p>
         </div>
         <span className="badge-slate text-[10px] font-semibold">
@@ -134,7 +134,7 @@ export default function MicroclimateTelemetryCard({ data, loading, onBroadcastCl
           </span>
         </div>
         <p className="text-[11px] text-slate-600 leading-relaxed font-medium">
-          FortyGuard scan detects peak exposure at Sector A ({surfaceTemp}°F). Guided safety vector points {shiftDist}m toward lowest thermal exposure Sector D ({coolSectorTemp}°F).
+          Thermal Radar scan detects peak exposure at Sector A ({surfaceTemp}°F). Guided safety vector points {shiftDist}m toward lowest thermal exposure Sector D ({coolSectorTemp}°F).
         </p>
 
         {onBroadcastClick && (

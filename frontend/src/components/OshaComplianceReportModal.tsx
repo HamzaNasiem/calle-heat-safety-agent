@@ -54,7 +54,7 @@ export default function OshaComplianceReportModal({
                 OSHA & ILO Heat Safety Compliance Audit
               </h2>
               <p className="text-[11px] text-slate-500 font-medium">
-                FortyGuard Microclimate Verification Certificate
+                Automated Heat & Voice Dispatch Verification Certificate
               </p>
             </div>
           </div>
@@ -92,7 +92,7 @@ export default function OshaComplianceReportModal({
           {/* Section 1: Spatial Telemetry */}
           <div className="space-y-2">
             <h4 className="text-xs font-bold text-[#141414]">
-              1. FortyGuard Microclimate Spatial Telemetry
+              1. Microclimate Spatial Heat Telemetry
             </h4>
             <div className="grid grid-cols-3 gap-2 text-center">
               <div className="p-2.5 rounded-xl bg-[#f9fafb] border border-rose-200">
