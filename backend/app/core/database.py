@@ -19,10 +19,11 @@ def normalize_database_url(raw_url: str) -> tuple[str, dict]:
     url = (raw_url or "").strip()
     connect_args: dict = {}
 
-    # Vercel / serverless writable directory handling for SQLite
-    if os.environ.get("VERCEL") and (url.startswith("sqlite") or ":memory:" not in url):
-        if not url.startswith("sqlite+aiosqlite:////tmp/"):
-            url = "sqlite+aiosqlite:////tmp/thermashift.db"
+    # Cloud (Render / Vercel) standalone resilient SQLite default
+    if (os.environ.get("RENDER") or os.environ.get("VERCEL")) and not os.environ.get("USE_POSTGRES"):
+        url = "sqlite+aiosqlite:////tmp/calle_guardian.db"
+        connect_args = {"check_same_thread": False, "timeout": 30}
+        return url, connect_args
 
     # SQLite normalizations
     if url.startswith("sqlite://"):
