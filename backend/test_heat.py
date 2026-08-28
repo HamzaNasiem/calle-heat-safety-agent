@@ -9,6 +9,10 @@ pytestmark = pytest.mark.asyncio
 
 async def test_heat_endpoints():
     """Verify microclimate and hourly forecast endpoints for seeded sites."""
+    from app.core.database import init_db
+    from seed_global_sites import seed_sites
+    await init_db()
+    await seed_sites()
     async with AsyncClient(transport=ASGITransport(app=app), base_url="http://test") as client:
         sites_res = await client.get("/sites")
         assert sites_res.status_code == 200

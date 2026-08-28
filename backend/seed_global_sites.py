@@ -107,9 +107,8 @@ async def seed_sites():
         if not mgr:
             mgr = Manager(
                 id=DEFAULT_MANAGER_ID,
-                name="FortyGuard Enterprise Operations",
+                name="CALL-E Enterprise Operations",
                 email="ops@thermashift.ai",
-                phone_number="+923172532350",
             )
             session.add(mgr)
             await session.flush()

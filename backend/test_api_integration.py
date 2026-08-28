@@ -20,7 +20,11 @@ pytestmark = pytest.mark.asyncio
 
 @pytest_asyncio.fixture(autouse=True)
 async def cleanup_engine():
-    """Dispose engine connections after each test to reset connection pool for asyncpg."""
+    """Dispose engine connections after each test to reset connection pool."""
+    from app.core.database import init_db
+    from seed_global_sites import seed_sites
+    await init_db()
+    await seed_sites()
     yield
     await engine.dispose()
 
