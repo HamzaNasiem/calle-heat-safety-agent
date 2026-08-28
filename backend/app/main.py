@@ -50,13 +50,34 @@ async def keep_alive_self_ping():
 
 
 async def auto_seed_if_empty():
-    """Auto-seed default global industrial sites if DB is fresh."""
+    """Auto-seed default global industrial sites if DB is fresh with resilient SQLite fallback."""
+    import app.models  # Ensures all tables (Site, Worker, etc.) are registered on Base.metadata
+    from app.core import database
+
+    # 1. Attempt schema creation on configured engine
     try:
-        import app.models  # Ensures all tables (Site, Worker, etc.) are registered on Base.metadata
-        async with engine.begin() as conn:
+        async with database.engine.begin() as conn:
+            await conn.run_sync(Base.metadata.create_all)
+    except Exception as e:
+        logger.warning(f"Primary database connection error ({e}). Falling back to local resilient SQLite...")
+        fallback_url = "sqlite+aiosqlite:////tmp/calle_guardian.db" if os.environ.get("RENDER") or os.environ.get("VERCEL") else "sqlite+aiosqlite:///calle_guardian.db"
+        database.engine = create_async_engine(
+            fallback_url,
+            connect_args={"check_same_thread": False, "timeout": 30}
+        )
+        database.AsyncSessionLocal = async_sessionmaker(
+            bind=database.engine,
+            class_=AsyncSession,
+            expire_on_commit=False,
+            autocommit=False,
+            autoflush=False,
+        )
+        async with database.engine.begin() as conn:
             await conn.run_sync(Base.metadata.create_all)
 
-        async with AsyncSessionLocal() as db:
+    # 2. Seed default data if database is fresh
+    try:
+        async with database.AsyncSessionLocal() as db:
             result = await db.execute(select(Site))
             existing = result.scalars().all()
             if not existing:
