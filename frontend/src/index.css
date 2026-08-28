@@ -1,0 +1,103 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html, body {
+    max-width: 100vw;
+    overflow-x: hidden;
+    background-color: #f4f4f4;
+    color: #141414;
+    font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::-webkit-scrollbar {
+    width: 5px;
+    height: 5px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #f4f4f4;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #d4d4d4;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a3a3a3;
+  }
+}
+
+@layer components {
+  /* Crisp Light Mode Enterprise Surfaces */
+  .card-surface {
+    @apply bg-[#ffffff] text-[#141414] border border-[#e5e5e5] rounded-2xl shadow-sm transition-all duration-200 max-w-full;
+  }
+
+  .card-surface-hover {
+    @apply card-surface hover:border-slate-300 hover:shadow-md;
+  }
+
+  .card-surface-glass {
+    @apply bg-[#ffffff]/95 backdrop-blur-md text-[#141414] border border-[#e5e5e5] rounded-2xl shadow-lg max-w-full;
+  }
+
+  /* Refined High-Contrast Buttons with Mobile Touch Targets */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-1.5 bg-[#141414] hover:bg-[#262626] text-white text-xs font-semibold px-3 py-2 sm:px-3.5 sm:py-2 rounded-xl transition-all duration-150 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none text-center;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-1.5 bg-rose-600 hover:bg-rose-500 text-white text-xs font-semibold px-3 py-2 sm:px-3.5 sm:py-2 rounded-xl transition-all duration-150 shadow-sm active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none text-center;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-1.5 bg-[#ffffff] hover:bg-[#f5f5f5] text-[#141414] text-xs font-medium px-3 py-2 sm:px-3.5 sm:py-2 rounded-xl transition-all duration-150 border border-[#e5e5e5] active:scale-[0.98] disabled:opacity-50 disabled:pointer-events-none shadow-sm text-center;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-1.5 bg-[#ffffff] sm:bg-transparent hover:bg-slate-100 text-[#141414] text-xs font-medium px-2.5 py-1.5 sm:px-3 sm:py-1.5 rounded-xl transition-all duration-150 border border-slate-200 active:scale-[0.98] text-center shadow-sm sm:shadow-none;
+  }
+
+  /* Subtle Crisp Light Badges */
+  .badge-emerald {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-emerald-50 text-emerald-700 border border-emerald-200 whitespace-nowrap;
+  }
+
+  .badge-amber {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-amber-50 text-amber-800 border border-amber-200 whitespace-nowrap;
+  }
+
+  .badge-rose {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-rose-50 text-rose-700 border border-rose-200 whitespace-nowrap;
+  }
+
+  .badge-slate {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-[10px] sm:text-xs font-medium bg-slate-100 text-slate-700 border border-slate-200 whitespace-nowrap;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.leaflet-container {
+  background: #f4f4f4 !important;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%;
+  isolation: isolate;
+  z-index: 1;
+}
