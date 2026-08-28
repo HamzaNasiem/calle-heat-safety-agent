@@ -128,7 +128,8 @@ class Base(DeclarativeBase):
 
 async def get_db() -> AsyncSession:  # type: ignore[return]
     """FastAPI dependency that yields an async DB session with automatic rollback on error."""
-    async with AsyncSessionLocal() as session:
+    from app.core import database
+    async with database.AsyncSessionLocal() as session:
         try:
             yield session
         except Exception:
